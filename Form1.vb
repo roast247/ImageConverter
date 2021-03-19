@@ -7,19 +7,29 @@
     Private draggable As Boolean
     Private mouseY As Integer
     Private mouseX As Integer
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        cmbImageFormat.Items.Add("Select")
+        cmbImageFormat.Items.Add("Bmp")
+        cmbImageFormat.Items.Add("Jpeg")
+        cmbImageFormat.Items.Add("Png")
+        cmbImageFormat.Items.Add("Gif")
+        cmbImageFormat.Items.Add("Ico")
+        cmbImageFormat.Items.Add("Tiff")
+        cmbImageFormat.Items.Add("Exif")
+        cmbImageFormat.SelectedIndex = 0
+    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
-        OpenFileDialog1.Title = "Select Image"
-        OpenFileDialog1.FileName = String.Empty
-        OpenFileDialog1.Filter = "Image files|*.bmp;*.gif;*.jpg;*.png;*.jpeg;*.ico;*.tiff;*.exif;*.wmf;*.jif"
-
-        If OpenFileDialog1.ShowDialog = DialogResult.OK Then
-            PictureBox1.Image = Image.FromFile(OpenFileDialog1.FileName)
-            TextBox1.Text = OpenFileDialog1.FileName
-        End If
-
-
+        With OpenFileDialog1
+            .Title = "Select Image"
+            .Filter = "Image files|*.bmp;*.gif;*.jpg;*.png;*.jpeg;*.ico;*.tiff;*.exif;*.wmf;*.jif"
+            .FileName = String.Empty
+            If .ShowDialog = Windows.Forms.DialogResult.OK Then
+                SourceFilePath = .FileName
+                TextBox1.Text = SourceFilePath
+                PictureBox1.Image = Image.FromFile(SourceFilePath)
+            End If
+        End With
 
         Label8.Text = PictureBox1.Image.Width
         Label9.Text = PictureBox1.Image.Height
@@ -95,19 +105,6 @@
             cmbImageFormat.SelectedIndex = 0
         End If
     End Sub
-
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        cmbImageFormat.Items.Add("Select")
-        cmbImageFormat.Items.Add("Bmp")
-        cmbImageFormat.Items.Add("Jpeg")
-        cmbImageFormat.Items.Add("Png")
-        cmbImageFormat.Items.Add("Gif")
-        cmbImageFormat.Items.Add("Ico")
-        cmbImageFormat.Items.Add("Tiff")
-        cmbImageFormat.Items.Add("Exif")
-        cmbImageFormat.SelectedIndex = 0
-    End Sub
-
     Private Sub Close_app_Click(sender As Object, e As EventArgs) Handles Close_app.Click
         Close()
     End Sub
