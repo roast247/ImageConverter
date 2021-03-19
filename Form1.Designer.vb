@@ -82,6 +82,7 @@ Partial Class Form1
         '
         'Button1
         '
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button1.Location = New System.Drawing.Point(277, 42)
         Me.Button1.Name = "Button1"
         Me.Button1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparkleBlue
@@ -92,6 +93,7 @@ Partial Class Form1
         '
         'Button2
         '
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button2.Location = New System.Drawing.Point(277, 161)
         Me.Button2.Name = "Button2"
         Me.Button2.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparkleBlue
@@ -102,6 +104,7 @@ Partial Class Form1
         '
         'Button3
         '
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button3.Location = New System.Drawing.Point(128, 196)
         Me.Button3.Name = "Button3"
         Me.Button3.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparkleBlue
@@ -111,6 +114,7 @@ Partial Class Form1
         '
         'cmbImageFormat
         '
+        Me.cmbImageFormat.Cursor = System.Windows.Forms.Cursors.Hand
         Me.cmbImageFormat.DropDownWidth = 128
         Me.cmbImageFormat.Location = New System.Drawing.Point(105, 81)
         Me.cmbImageFormat.Name = "cmbImageFormat"
@@ -175,7 +179,7 @@ Partial Class Form1
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(491, 27)
+        Me.Panel1.Size = New System.Drawing.Size(491, 25)
         Me.Panel1.TabIndex = 12
         '
         'PictureBox2
@@ -193,7 +197,7 @@ Partial Class Form1
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(33, 7)
+        Me.Label5.Location = New System.Drawing.Point(33, 6)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(151, 14)
         Me.Label5.TabIndex = 1
@@ -204,14 +208,15 @@ Partial Class Form1
         Me.Close_app.BackColor = System.Drawing.Color.Red
         Me.Close_app.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Close_app.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Close_app.FlatAppearance.BorderColor = System.Drawing.Color.Maroon
         Me.Close_app.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon
         Me.Close_app.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Close_app.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Close_app.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Close_app.ForeColor = System.Drawing.Color.White
-        Me.Close_app.Location = New System.Drawing.Point(464, 0)
+        Me.Close_app.Location = New System.Drawing.Point(466, 0)
         Me.Close_app.Name = "Close_app"
-        Me.Close_app.Size = New System.Drawing.Size(27, 27)
+        Me.Close_app.Size = New System.Drawing.Size(25, 25)
         Me.Close_app.TabIndex = 0
         Me.Close_app.Text = "X"
         Me.Close_app.UseVisualStyleBackColor = False
